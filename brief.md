@@ -17,11 +17,17 @@ Android's runtime permission model restricts access to sensitive device features
 
 Resource: Android Developers - Request runtime permissions - https://developer.android.com/training/permissions/requesting
 ## Networking
+DNS over HTTPS (DoH) sends DNS queries and responses through encrypted HTTPS connections. According to RFC 8484, it protects DNS traffic against passive monitoring and certain attempts to redirect queries to malicious servers. However, DoH does not hide all browsing activity or prevent the DNS resolver from seeing requests. It also does not guarantee that DNS answers are authentic; DNSSEC addresses a different security problem. For a national login service, DoH improves DNS transport privacy but cannot replace other security controls.
 
+Resource: RFC 8484 - DNS Queries over HTTPS (DoH) - https://www.rfc-editor.org/rfc/rfc8484.html
 ## Cybersecurity
+Phishing-resistant authentication prevents attackers from reusing authentication responses on fraudulent websites. NIST recognizes cryptographic methods that bind authentication to the legitimate verifier, including FIDO2/WebAuthn passkeys and security keys. Client-authenticated TLS can also provide phishing resistance. In contrast, SMS codes, email codes, and manually entered one-time passwords are not phishing-resistant because attackers may relay them during a phishing attack. A national login service should prefer phishing-resistant multi-factor authentication, such as a passkey protected by a device PIN or biometric verification.
 
+Resource: NIST SP 800-63B - Authenticators - https://pages.nist.gov/800-63-4/sp800-63b/authenticators/
 ## Data
+Oman's Personal Data Protection Law, issued by Royal Decree 6/2022, requires controllers to establish safeguards and procedures for processing personal data. These include assessing risks, protecting confidentiality, and securing data transfers. Controllers must respect individuals' rights, maintain processing records, and notify the relevant authority and affected individuals of qualifying data breaches under applicable procedures. The law also addresses the appointment of a data protection officer and restrictions on disclosure. A national login service must apply these obligations when handling citizens' identity information.
 
+Resource: Royal Decree 6/2022 - Personal Data Protection Law - https://decree.om/2022/l20220006/
 ## Misconception in My Track
 
 ## Open Question
