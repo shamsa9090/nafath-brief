@@ -29,5 +29,6 @@ Oman's Personal Data Protection Law, issued by Royal Decree 6/2022, requires con
 
 Resource: Royal Decree 6/2022 - Personal Data Protection Law - https://decree.om/2022/l20220006/
 ## Misconception in My Track
-
+A common misconception in networking is that DNS over HTTPS (DoH) makes DNSSEC unnecessary because both protect DNS. In reality, they address different security concerns. DoH encrypts communication between the DNS client and resolver, protecting queries during transport. However, encryption alone does not prove that the DNS records returned are authentic. DNSSEC provides validation of DNS data, which DoH does not replace. RFC 8484, Section 9, "Security Considerations," explicitly explains that the two protocols solve different problems and remain compatible. Therefore, a secure national login service should not treat DoH as a substitute for DNSSEC validation.
 ## Open Question
+How can a national digital login service select a trustworthy DoH resolver while ensuring DNSSEC validation, protecting citizens' privacy, and maintaining reliable access during network outages?
